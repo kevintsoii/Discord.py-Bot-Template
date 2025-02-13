@@ -1,6 +1,6 @@
 # Discord Bot Template
 
-Discord.py bot template to create a fully functioning bot with modular commands, logging, metrics, and caching. Used by a bot with 25,000+ servers.
+Template to create a fully functional Discord bot with modular commands, logging, metrics, caching, and automated deployment. Used by a bot with 25,000+ servers.
 
 **Tech Stack**
 
@@ -8,13 +8,13 @@ Discord.py bot template to create a fully functioning bot with modular commands,
 - Deployment - Docker, Github Actions
 - Monitoring - Prometheus, Grafana
 
-**Contents**
-
-- Get Started
-- Caching
-- Monitoring
-
 ## Demo
+
+An example command & monitoring dashboard are provided.
+
+![Screenshot 2025-02-12 212258](https://github.com/user-attachments/assets/99d87bd8-421f-4c90-b644-261cfc6fd99e)
+![Screenshot 2025-02-12 200045](https://github.com/user-attachments/assets/8c109044-5733-49f7-9abb-a02704ed7544)
+
 
 ## Prerequisites
 
@@ -57,10 +57,10 @@ Discord.py bot template to create a fully functioning bot with modular commands,
    - add a data source
    - import `grafana/dashboard.json` after replacing the data source ID
 
-8. (Optional) Set up GitHub Actions for automatic deployment to a Linux server
+8. (Optional) Set up GitHub Actions in `Settings > Secrets and variables > Actions > Repository` for automatic deployment to a Linux server
 
    ```
-   secrets.SSH_IP
+   secrets.SSH_KEY
    secrets.SSH_USERNAME
    secrets.SSH_IP
    vars.DEPLOY_PATH
