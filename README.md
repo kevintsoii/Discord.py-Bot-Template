@@ -1,6 +1,6 @@
 # Discord Bot Template
 
-Template to create a fully functional Discord bot with modular commands, logging, metrics, caching, and automated deployment. Used by a bot with 25,000+ servers.
+Template to create a fully functional Discord bot with modular commands, logging, metrics, caching, and automated deployment. Used by a bot with 25,000+ servers (closed-source).
 
 **Tech Stack**
 
@@ -56,6 +56,7 @@ An example command & monitoring dashboard are provided.
 
    - add a data source
    - import `grafana/dashboard.json` after replacing the data source ID
+   - additionally, you can add alerts for certain error percentages in the alerting tab
 
 8. (Optional) Set up GitHub Actions in `Settings > Secrets and variables > Actions > Repository` for automatic deployment to a Linux server
 
