@@ -1,13 +1,11 @@
-@echo off
+#!/bin/bash
 
 docker-compose up -d
 
-if exist .venv\Scripts\activate (
-    call .venv\Scripts\activate
-)
+if [ -d ".venv/bin" ]; then
+    source .venv/bin/activate
+fi
 
 pip install -r requirements.txt
 
 python -B bot.py --development
-
-pause

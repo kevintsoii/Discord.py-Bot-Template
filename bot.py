@@ -56,6 +56,9 @@ class Bot(commands.AutoShardedBot):
         )
 
         self.logger = logger
+        self.session = None
+        self.pool = None
+        self.redis = None
         self.metrics_handler = MetricsHandler()
 
     async def setup_hook(self):
@@ -147,8 +150,10 @@ class Bot(commands.AutoShardedBot):
             await self.session.close()
 
         if "--development" not in sys.argv:
-            await self.pool.wait_closed()
-            await self.redis.close()
+            if self.pool:
+                await self.pool.wait_closed()
+            if self.redis:
+                await self.redis.close()
 
         logging.shutdown()
         await super().close()
